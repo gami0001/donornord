@@ -1,0 +1,113 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.logohead {
+  width: 130%;
+}
+
+.imgburger {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 20px;
+  position: relative;
+}
+.menu {
+  display: none;
+  list-style: none;
+}
+
+.burger {
+  display: block;
+  width: 50px;
+  height: 20px;
+  cursor: pointer;
+  z-index: 10;
+}
+
+.burger .line {
+  width: 100%;
+  height: 2px;
+  background-color: #000000;
+  margin-bottom: 5px;
+  transition: 0.2s linear;
+}
+
+.burger.active .line:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 5px);
+  transition: 0.3s linear;
+}
+
+.burger.active .line:nth-child(2) {
+  opacity: 0;
+  transition: 0.15s linear;
+}
+
+.burger.active .line:nth-child(3) {
+  transform: rotate(-45deg) translate(5px, -5px);
+  transition: 0.3s linear;
+}
+
+nav.active .menu {
+  display: block;
+  background-color: #878787;
+  position: absolute;
+  top: 250px;
+  left: 60px;
+  width: 70%;
+  box-shadow: 0 10px 10px rgba(255, 254, 254, 0.1);
+  z-index: 1;
+}
+
+nav.active .menu li {
+  margin: 10px 70px;
+}
+
+nav.active .menu a {
+  font-size: 24px;
+  color: #f9f5f2;
+  text-decoration: none;
+}
+
+@media screen and (min-width: 800px) {
+  nav {
+    display: flex;
+    justify-content: center;
+  }
+
+  .menu {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  .menu li {
+    margin: 0 30px;
+  }
+
+  .menu a {
+    font-family: "Old Standard TT", serif;
+    font-weight: 400;
+    font-size: 1.2rem;
+    display: block;
+    width: 160px;
+    text-align: center;
+    padding: 7px 0;
+    color: #f9f5f2;
+    text-decoration: none;
+    background-color: #878787;
+    transition: color 0.3s, background-color 0.3s;
+  }
+
+  .menu a:hover {
+    color: #7b2d24;
+  }
+
+  .burger {
+    display: none;
+  }
+}
