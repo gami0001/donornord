@@ -58,6 +58,14 @@ h3 {
   font-weight: 200;
 }
 
+h4 {
+  margin-left: 30px;
+  margin-right: 30px;
+  font-family: "Aboreto", system-ui;
+  color: #350908;
+  font-weight: 200;
+}
+
 .omhtml h3 {
   font-size: 1.5rem;
 }
@@ -86,6 +94,50 @@ h3 {
 
 .knapgrid {
   display: flex;
+}
+
+.calendar {
+  display: grid;
+  grid-template-columns: repeat(7, 40px);
+  gap: 10px;
+  margin-bottom: 30px;
+  justify-content: center;
+}
+
+.day {
+  width: 40px;
+  height: 50px;
+  text-align: center;
+  line-height: 40px;
+  background-color: #f4e8d5;
+  border-radius: 4px;
+  cursor: pointer;
+}
+.day_selected {
+  width: 40px;
+  height: 50px;
+  text-align: center;
+  line-height: 40px;
+  background-color: #a83510;
+  color: white;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.day:hover {
+  border: solid 1px#350908;
+}
+
+#times {
+  display: none;
+  grid-template-columns: repeat(3, auto);
+  gap: 20px 40px;
+  justify-content: center;
+  text-align: center;
+}
+
+#times.visible {
+  display: grid;
 }
 
 /*img css*/
