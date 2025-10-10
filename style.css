@@ -74,6 +74,23 @@ h4 {
   text-align: center;
 }
 
+.om_wrap p {
+  font-family: "Alice", serif;
+  margin-left: 30px;
+  margin-right: 30px;
+  margin-top: 30px;
+  font-size: 1.5rem;
+  font-weight: 100;
+}
+
+.om_wrap_tekst {
+  position: absolute;
+  right: -40px;
+  bottom: -30px;
+  max-width: 230px;
+  line-height: 1.4;
+}
+
 /*knap css*/
 
 .blivdonorknap {
@@ -183,6 +200,44 @@ h4 {
   margin-top: 53px;
   margin-left: -3px;
   width: 70%;
+}
+
+.book_blomstcss {
+  margin: 60px 0 70px 0;
+}
+
+.om_wrap {
+  position: relative;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+  margin-right: 40px;
+  margin-bottom: 50px;
+  padding-bottom: 180px;
+}
+
+.om_wrap_imgs {
+  position: relative;
+  width: 350px;
+}
+
+.om_wrap_imgs img {
+  object-fit: cover;
+}
+
+.om_wrap_imgs .top {
+  position: relative;
+  z-index: 1;
+  width: 70%;
+  left: 120px;
+}
+
+.om_wrap_imgs .bottom {
+  position: absolute;
+  bottom: -180px;
+  left: -20px;
+  z-index: 2;
+  width: 50%;
 }
 
 /* grid - diverse*/
