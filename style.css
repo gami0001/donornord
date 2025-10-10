@@ -29,11 +29,7 @@ img {
   font-style: normal;
 }
 
-/*index css*/
-
-.logohead {
-  width: 130%;
-}
+/*tekst*/
 
 h1 {
   margin-top: 90px;
@@ -62,6 +58,16 @@ h3 {
   font-weight: 200;
 }
 
+.omhtml h3 {
+  font-size: 1.5rem;
+}
+
+.booktekst {
+  text-align: center;
+}
+
+/*knap css*/
+
 .blivdonorknap {
   background-color: #350908;
   color: white;
@@ -79,6 +85,11 @@ h3 {
 
 .knapgrid {
   display: flex;
+}
+
+/*img css*/
+.logohead {
+  width: 130%;
 }
 
 .mobileindex_wrap {
@@ -110,6 +121,18 @@ h3 {
 .mobilehoney {
   margin-bottom: 80px;
 }
+
+.satinimg {
+  margin-top: 60px;
+}
+
+.logofooter {
+  margin-top: 53px;
+  margin-left: -3px;
+  width: 70%;
+}
+
+/* grid - diverse*/
 .linje {
   margin: 0 30px;
 }
@@ -121,12 +144,6 @@ h3 {
   margin-left: 30px;
   font-family: "Inter", sans-serif;
   font-weight: 200;
-}
-
-.logofooter {
-  margin-top: 53px;
-  margin-left: -3px;
-  width: 70%;
 }
 
 /*burger*/
