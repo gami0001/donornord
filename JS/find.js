@@ -1,7 +1,26 @@
 console.log("loaded YAY");
 
-const url = "https://dummyjson.com/users";
+const url = "https://dummyjson.com/users/filter?key=gender&value=male&limit=300";
 const users_container = document.querySelector(".users_container");
+let allData;
+
+document.querySelectorAll(".donor_filter button").forEach((btn) => {
+  btn.addEventListener("click", filterKlik);
+});
+
+function filterKlik(evt) {
+  showFiltered(evt.currentTarget.dataset.eyecolor);
+}
+
+function showFiltered(filter) {
+  if (filter == "All") {
+    showUsers(allData);
+  } else {
+    const filteredUsersArr = allData.filter((user) => user.eyeColor === filter);
+    showUsers(filteredUsersArr);
+  }
+  console.log("Filter valgt:", filter);
+}
 
 function getData(url) {
   console.log("Henter data...");
@@ -9,12 +28,18 @@ function getData(url) {
     .then((res) => res.json())
     .then((data) => {
       console.log("Data modtaget:", data);
-      showUsers(data.users);
+      allData = data.users;
+      showUsers(allData);
     })
     .catch((err) => console.error("Fejl:", err));
 }
 
 function showUsers(users) {
+  const existingList = document.querySelector(".users_list");
+  if (existingList) {
+    existingList.remove();
+  }
+
   const usersList = document.createElement("div");
   usersList.classList.add("users_list");
 
