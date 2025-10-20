@@ -91,6 +91,26 @@ h4 {
   line-height: 1.4;
 }
 
+.imageContainer {
+  display: grid;
+  > * {
+    place-self: center center;
+    grid-area: 1 / 1;
+  }
+}
+
+.tall_genetics_text {
+  display: inline-block;
+  background-color: #a83510;
+  color: white;
+  border-radius: 5px;
+  padding: 5px 10px;
+  grid-area: 1 / 1;
+  justify-self: start;
+  align-self: start;
+  margin: 8px;
+  z-index: 10;
+}
 /*knap css*/
 
 .blivdonorknap {

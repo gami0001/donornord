@@ -44,12 +44,18 @@ function showUsers(users) {
   usersList.classList.add("users_list");
 
   users.forEach((user) => {
+    const isTall = user.height > 182;
+    const heightText = `${user.height} cm`;
+
     const card = document.createElement("div");
     card.classList.add("user_card");
 
     card.innerHTML = `
       <div class="card_top">
-        <img src="IMG/silhuet.svg" alt="silhuet" class="silhouette">
+        <div class="imageContainer">
+          <img src="IMG/silhuet.svg" alt="silhuet" class="silhouette">
+          ${isTall ? '<p class="tall_genetics_text">tall genetics</p>' : ""}
+        </div>
         <div class="info">
           <p class="label">Hårfarve: <span>${user.hair.color}</span></p>
           <p class="label">Øjenfarve: <span>${user.eyeColor}</span></p>
