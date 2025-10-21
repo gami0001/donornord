@@ -64,7 +64,6 @@ function showUsers(users) {
       </div>
       <div class="card_bottom">
         <p class="id">ID ${user.id}</p>
-        <p class="age">(${user.age} år)</p>
       </div>
     `;
 
